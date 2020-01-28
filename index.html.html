@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color: #f0f5e7;
+                width:fit-content;
+                border: 10px solid green;
+                padding: 30px;
+                margin: auto;
+
+            }
+            div {
+                text-align: center;
+                font-weight: 400;
+                font-size: large;
+            }
+            input[type=number] {
+                width: 80%;
+                padding: 15px;
+                margin: 5px;
+                border: 2px solid black;
+                box-sizing: border-box;
+                border-radius: 8px;
+            }
+            button {
+                width: 80%;
+                padding: 15px;
+                margin: 5px;
+                border: 2px solid black;
+                box-sizing: border-box;
+                border-radius: 8px;
+                font-size: large;
+            }
+        </style>
+    </head>
+
+    <body>
+    
+        <h1>SIMPLE INTEREST</h1>
+            <div>
+                <label>PRINCIPAL</label><br/>
+                 <input class="simpleint" type="number" placeholder="Enter principal amount" id="pr"><br/><br/>
+
+                <label>RATE</label><br/>
+                 <input class="simpleint" type="number" placeholder="Enter the rate" id="rt"><br/><br/>
+
+                <label>TIME</label><br/>
+                <input class="simpleint" type="number" placeholder="Enter the number of years" id="tm"><br/><br/>
+
+            <button onclick="performcalculation()">CALCULATE</button><br/>
+
+            <p id="result"></p>
+            </div>
+
+        <script>
+            function performcalculation()
+            {
+                pr = document.getElementById("pr").value;
+                rt = document.getElementById("rt").value;
+                tm = document.getElementById("tm").value;
+                result = document.getElementById("result");
+
+                result.innerHTML = " ANSWER = " + (pr*rt*tm/100);
+            }
+        </script>
+    </body
+</html>
